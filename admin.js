@@ -138,13 +138,13 @@ var authorization = {
     console.log("signIn fired");  
     firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
       authorization.hideModal;
-      authorization.loggedIn = true;
       var temp = authorization.userEmail.replace("@","AT").replace(".","dot");
       console.log(temp);
       userRef = database.ref("/users/" + temp);
       userRef.once("value", function (snapshot) {
         if(snapshot.val().hasOwnProperty('adminKey')) {
             if(snapshot.val()['adminKey'] === 'alpha') {
+                authorization.loggedIn = true;
                 authorization.userName =snapshot.val().name;
                 authorization.userEmail = snapshot.val().email;
                 $("#name").text(authorization.newUserName);
