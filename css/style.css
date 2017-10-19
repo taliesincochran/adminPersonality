@@ -1,0 +1,23 @@
+#recordingVisualDiv, #getPersonalityBtnDiv, #progressBarDiv {
+	display: flex;
+	justify-content: center;
+}
+
+#getPersonalityBtnDiv {
+	margin-top: 20px;
+}
+
+#stop, #recordButton {
+	padding: 20px 20px 20px 0px;
+}
+
+#progressBarInnerDiv {
+	padding: 0;
+}
+
+body {
+	background-image: url("../images/vintage-concrete.png");
+}
+table {
+	background-color: white;
+}
